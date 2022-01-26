@@ -1,0 +1,14 @@
+#listar todos os plugin disponiveis
+asdf plugin-list all
+
+#add um plugin da lista a maquina
+asdf plugin-add nome_do_plugin
+
+#instalar um plugin recem add
+asdf install nome_do_plugin versao
+
+#configurar como acessivel na maquina
+asdf global nome_do_plugin versao
+
+#ver aonde esta o plugin na maquina
+asdf where nome-do-plugin

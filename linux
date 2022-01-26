@@ -1,0 +1,9 @@
+#gerar uma chave publica e privada
+ssh-keygen
+
+#verificar localizacao do java
+sudo update-alternatives --config java
+
+#set JAVA_HOME
+copie no final do doc /etc/environment 
+JAVA_HOME="caminho"

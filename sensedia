@@ -1,0 +1,6 @@
+#JAVA_OPTS para debug:
+JAVA_OPTS=-Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:9014 
+
+#JAVA_OPTS comum:
+JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -XX:+UseParallelGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9014 -Xmx256m
+

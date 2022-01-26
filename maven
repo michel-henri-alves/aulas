@@ -1,0 +1,8 @@
+#execucao padrao sem testes
+mvn clean install -DSkipTests
+
+#executar testes de uma unica classe
+mvn test -Dtest=NomeDaClasse test
+
+#executar um unico test
+mvn test -Dtest=NomeDaClasse#nomeDoMetodo test

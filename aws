@@ -1,0 +1,48 @@
+#configurando a conta do aws
+aws configure
+
+#confirmar sucesso na conexao (comando lista as ultimas 5 imagens disponiveis na regiao)
+aws ec2 describe-images --owners amazon | tail --lines=5
+
+#criacao para acesso via SSH as instancias
+aws ec2 create-key-pair --key-name sa-east-1_teste
+
+#criar instancia de uma maquina na aws...
+aws ec2 run-instances --image-id [id-da-imagem] --instance-type [tipo-da-maquina]
+#...exemplo
+aws ec2 run-instances --image-id ami-090006f29ecb2d79a --instance-type t2.micro
+
+#liberar acesso externo para o grupo de seguranca onde a vpc esta contida
+aws ec2 authorize-security-group-ingress --group-name "default" --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+#lista os hosts disponiveis
+aws ec2 describe-instances --instance-id [id-da-instancia] | grep ASSOC
+
+#acessar a instancia via SSH
+ssh -i [arquivo contendo a chave privada gerada - **deve estar como restrito chmod 400**] [name da maquina]
+
+#parar a instancia 
+aws ec2 stop-instances --instance-ids [id-da-instancia]
+
+#lista os clusters mapeados na maquina
+kubectx
+
+#lista os cluster presentes na aws
+aws eks list-clusters
+
+#autenticando em um cluster kubernetes na AWS
+aws eks --region <regiao> update -kubeconfig --name <nome do clusters> --profile <ainda nao sei, o da sensedia eh sensedia-dev>
+
+#ainda nao sei -- listou algo
+kubens
+
+#seta como atual um dos parametros listados acima
+kubens staging
+
+#cria um novo pod
+kubectl run <nome-do-pod> --image <nome da imagem>
+
+
+##### criar maquina virtual na aws
+
+

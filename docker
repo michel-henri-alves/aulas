@@ -1,0 +1,82 @@
+#listar containers
+docker ps
+
+#
+docker ps -al
+
+#executar comandos dentro do container pelo terminal
+docker exec -it <nome do container> /bin/bash (ou /sh)
+
+#baixar imagem
+docker pull <nome da imagem>
+
+#listar imagens 
+docker images
+
+#listar containers ativos
+docker ps
+
+#listar todos os containers
+docker ps -a
+
+#status do container
+docker stats <id ou apelido do container>
+
+#build da imagem (criação do container)
+docker build -t <nome> .
+
+#listar imagens
+docker images 
+
+#baixar imagens base
+docker pull <nome da imagem base>
+
+#compilando
+docker build -t <nome>/
+
+#rodar container
+docker container run --name <nome do container> -it -d <nome da imagem base> /bin/sh
+
+#listar containers em execução
+docker container ps
+#ou
+docker container ls -a
+
+#listar imagens
+docker image ls
+
+#listar volumes (armazenamento de dados)
+docker volume ls
+
+#executando comandos dentro do container em execução
+docker container exec <nome> <comando>
+
+#parar container
+docker stop <nome>
+
+#rodar container ja criado
+docker start <nome>
+
+#rodar container com exposição de porta
+docker run -p 0.0.0.0:<porta interna>:<porta externa>/tcp <nome>
+
+#remover um container
+docker rm <nome>
+
+#compilar imagem
+docker build -t <imagem> .
+
+#acessar o docker terminal
+docker exec -it <nome-container> /bin/bash
+
+#run docker para conexao com usb driver habilitado
+docker container run --privileged -v /dev/bus/usb:/dev/bus/usb --name <nome> -p 0.0.0.0:<porta>:<porta>/tcp <nome>
+
+#run docker para conexao com usb driver habilitado e expecificação de porta
+docker container run --privileged -v /dev/bus/usb:/dev/bus/usb --device=/dev/ttyUSB0 --name <nome> -p 0.0.0.0:8080:8080/tcp <nome>
+
+# copiar arquivo para fora do container 
+sudo docker cp <nome do container>:<caminho do arquivo e nome no container> .
+
+#criar rede
+docker network create <nome da rede>

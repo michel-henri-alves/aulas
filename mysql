@@ -1,0 +1,38 @@
+#acessar cli mysql sem senha
+mysql
+
+#acessar cli c/ senha
+mysql -u <usuario> -p;
+
+#listar banco de dados
+show databases;
+
+#criar bd
+create database <nome>;
+
+#seleciona um bd
+use database;
+
+#lista as tabelas do bd
+show tables;
+
+#criar tabelas
+CREATE TABLE <nome> (<nome coluna> <tipo coluna>, ...);
+
+#inserir dados na tabela
+INSERT INTO <nome tabela> (<colunas>) VALUES (<dados das colunas>);
+
+#deletar todos os registros de uma tabela
+truncate table <nome da tabela>
+
+#deletar tabela
+DROP TABLE <tabela>
+
+#deletar bd
+DROP DATABASE <nome>
+
+#exportar um dump 
+mysqldump -u <usuario> -p <nome bd> > nome_do_arquivo.sql
+
+#importar um dump para o seu bd
+mysql -u <usuario> -p -h localhost <nome do bd> < nome_do_arquivo.sql
