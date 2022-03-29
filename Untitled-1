@@ -1,6 +1,0 @@
-
-build_environment {
-    "1" : "bate primeiro no Makefile que chama o arquivo correspondente na pasta de scripts"
-    "2" : "verifica se a -v do java = 11"
-    "3" : ""
-}

@@ -1,0 +1,5 @@
+#add nova imagem
+helm repo add <nome> <endereco>
+
+#instalar imagem criando pod
+helm install <nome pod> <imagem>

@@ -1,0 +1,18 @@
+#lista os namespaces
+kubens
+
+#troca para o namespace indicado
+kubens <nome do namespace>
+
+#lista os cluster
+kubectx
+
+#troca para o cluster indicado
+kubectx <nome do cluster>
+
+
+#cria um novo pod
+kubectl run <nome-pod> --image <noe da imagem> 
+
+#acessar um cluster
+kubectl <endereco do cluster>

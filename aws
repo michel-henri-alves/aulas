@@ -33,16 +33,3 @@ aws eks list-clusters
 #autenticando em um cluster kubernetes na AWS
 aws eks --region <regiao> update -kubeconfig --name <nome do clusters> --profile <ainda nao sei, o da sensedia eh sensedia-dev>
 
-#ainda nao sei -- listou algo
-kubens
-
-#seta como atual um dos parametros listados acima
-kubens staging
-
-#cria um novo pod
-kubectl run <nome-do-pod> --image <nome da imagem>
-
-
-##### criar maquina virtual na aws
-
-
