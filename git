@@ -35,3 +35,5 @@ git push origin --delete nome-da-branch
 #copiar commit de uma outra branch para a branch atual
 git cherry-pick id-do-commit-na-outra-branch
 
+#mudar de plataforma (github <-> bitbucket)
+ssh -T <nome do perfil> Ex.: ssh -T michel
