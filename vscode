@@ -1,0 +1,39 @@
+###atalhos
+
+#predicao
+ctrtl + espaco
+
+#mudar o foco para alguma dos arquivos abertos
+ctrl+tab ou ctrl+p
+
+#comecar debug
+f5
+
+#abrir paleta de comando
+ctrl+shift+p
+
+#abre o arquivo aonde a classe selecionada foi criado
+f12
+
+#abre menu do git
+ctrl+shift+g
+
+#abre menu do postman
+ctrl+shift+r
+
+#abre meno do spring boot
+
+#habilita zen mode 
+ctrl + k, z
+
+#sair do zen mode
+esc esc
+
+#fechar aba
+ctrl + w
+
+#buscar arquivo
+ctrl + shift + f
+
+#esconder/mostrar sidebar
+ctrl+b

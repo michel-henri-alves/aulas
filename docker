@@ -54,6 +54,9 @@ docker container exec <nome> <comando>
 #parar container
 docker stop <nome>
 
+#parar todos os containers
+docker stop $(docker ps -a -q)
+
 #rodar container ja criado
 docker start <nome>
 
@@ -80,3 +83,6 @@ sudo docker cp <nome do container>:<caminho do arquivo e nome no container> .
 
 #criar rede
 docker network create <nome da rede>
+
+#recuperar um banco de dados usando um dump mysql
+docker exec -i api-platform_mysql_1 mysql -uAPI_GOVERNANCE -pAPI_GOVERNANCE api_governance < api_governance.sql

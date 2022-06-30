@@ -1,0 +1,13 @@
+#logar ao usuario
+sudo -i -u postgres
+
+#acessar psql (logando pelo user postgres)
+sudo -u postgres psql
+
+#sair do psql
+\q
+
+#criar um novo usuario
+createuser --interactive
+
+

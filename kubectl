@@ -7,12 +7,80 @@ kubens <nome do namespace>
 #lista os cluster
 kubectx
 
+#listar nodes
+kubectl get nodes
+
+#lista pods
+kubectl get pods --all-namespaces
+
+#lista pods de um determinado namespace
+kubectl get pods -n <nome do namespace>
+
+#lista namespaces
+kubectl get namespaces
+
 #troca para o cluster indicado
 kubectx <nome do cluster>
 
+#criar um novo namespace
+kubectl create namespace <nome do namespace>
+
+#detalhes do node
+kubectl describe node <nome do node>
+
+#criar serviceaccount
+kubectl create serviceaccount <nome do serviceaccount>
 
 #cria um novo pod
-kubectl run <nome-pod> --image <noe da imagem> 
+kubectl run <nome-pod> --image <nome da imagem> -n <nome do namespace> 
+
+#visualizar eventos realizados no cluster
+kubectl get events
+
+#exporta as configs do pod para um arquivo yaml
+kubectl get pod/<name do pod> -n <nome do namespace> -o yaml > <nome do arquivo>.yaml
+
+#deletar um pod 
+kubectl delete pod <nome do pod> -n <namespace>
+
+#usar o comando dry-run para criar um template para criacao de pod
+kubectl run <nome pod> --image <nome image> -n <nome namespace> --dry-run=client -o yaml > <nome do arq de template>.yaml
+
+#recriar/criar pod a partir de um arquivo yaml
+kubectl create -f <nome do arquivo>.yaml -n <nome do namespace>
+
+#expor pods para fora do cluster
+kubectl expose pod <nome do pod> -n namespace
+
+#listar services
+kubectl get service
+
+#detalhes do service
+kubectl describe service <nome do service>
 
 #acessar um cluster
 kubectl <endereco do cluster>
+
+#deletar cluster
+kind delete cluster --name mykube
+
+#criar cluster
+kind create cluster --name mykube --config $HOME/kind-3nodes.yaml
+
+#criar deployment
+kubectl create deployment <nome do deployment> --image=<nome da imagem> -n <nome do namespace>
+
+#criar deployment por arquivo yaml
+kubectl create -f <nome do arquivo>.yaml -n <nome namespace>
+
+#deletar deployment
+kubectl delete deployment nginx
+
+#detalhes do deployment
+kubectl describe deployment <nome do deployment>
+
+#editar yaml do deployment
+kubectl edit deployment <nome do deployment>
+
+#mudar replicas necessarias dos pods no deployment
+kubectl scale deployment <nome do depployment> --replicas=<numero das replicas> -n <nome do namespace>
