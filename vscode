@@ -21,7 +21,8 @@ ctrl+shift+g
 #abre menu do postman
 ctrl+shift+r
 
-#abre meno do spring boot
+#abre menu do spring boot
+ctrl-shift-D
 
 #habilita zen mode 
 ctrl + k, z
@@ -37,3 +38,22 @@ ctrl + shift + f
 
 #esconder/mostrar sidebar
 ctrl+b
+
+#mudar de view
+ctrl-f6
+
+#delete linha
+ctrl-shift-k
+
+#mover linha
+alt - up/down
+
+#comentar linha
+ctrl-k, ctrl-c
+
+#descomentar linha
+ctrl-k, ctrl-u
+
+#formatar documento corretamente
+ctrl-shift-I
+
