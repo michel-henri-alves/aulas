@@ -62,7 +62,7 @@ kubectl describe service <nome do service>
 kubectl <endereco do cluster>
 
 #deletar cluster
-kind delete cluster --name mykube
+kind delete cluster --name <nome do cluster>
 
 #criar cluster
 kind create cluster --name mykube --config $HOME/kind-3nodes.yaml

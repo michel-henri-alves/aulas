@@ -7,3 +7,12 @@ sudo update-alternatives --config java
 #set JAVA_HOME
 copie no final do doc /etc/environment 
 JAVA_HOME="caminho"
+
+#ver as variaveis de ambiente
+printenv | less
+
+#ver valor de  determinada variavel de ambiente
+printenv <nome da variavel> OU echo $<nome da variavel>
+
+#criar nova variavel de ambiente
+export <nome da variavel>="<valor da variavel>"
